@@ -18,6 +18,8 @@ Simple and intuitive user interface.
 Real-time score tracking.
 Responsive design for various screen sizes.
 
+https://aman-kumar11.github.io/-Rock-Paper-Scissor-Game/
+
 Usage
 
 Clone or download the repository.
