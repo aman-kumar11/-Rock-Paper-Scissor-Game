@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color:#f8b124;
+}
+h1{
+    background-color:#ff0051;
+    color:black;
+    height: 5rem;
+    line-height: 4rem;
+}
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 4rem;
+    
+}
+.choice{
+    height: 160px;
+    width: 160px;  
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    /* background-color: black; */
+}
+.choice:hover{
+    transition: transform 0.2s ease;
+    transform: scale(1.2);
+    cursor: pointer;
+    /* border-style:solid;   */
+    background-color: black;
+}
+img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%; 
+}
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 5rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+#user-score, #comp-score{
+    font-size: 3rem;
+}
+.msg-container{
+    margin-top: 5rem;
+}
+#msg{
+    background-color:black ;
+    color: aliceblue;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 600px) {
+    h1{
+        height: 3rem;
+        line-height: 2rem;
+    }
+    .choices {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    img{
+        height: 120px;
+        width: 120px;
+    }
+    .choice {
+        height: 130px;
+        width: 130px;   
+    }
+
+    .msg-container {
+        margin-top: 3rem; /* Adjusted margin for smaller screens */
+        margin-bottom: 2rem;
+    }
+
+    #msg {
+        font-size: 1.5rem; /* Adjusted font size for smaller screens */
+        padding: 0.5rem; /* Adjusted padding for smaller screens */
+        border-radius: 10px; /* Adjusted border radius for smaller screens */
+    }
+}
+
+@keyframes scoreAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply animation to scoreboard */
+.score-board {
+    animation: scoreAnimation 0.5s ease; /* Apply animation to scoreboard */
+}
+
+/* Add animation for user score */
+@keyframes userScoreAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply animation to user score */
+#user-score.animate-score {
+    color: #fff;
+    font-weight: bold;
+    animation: userScoreAnimation 0.5s ease; /* Apply animation to user score */
+}
+
+/* Add animation for computer score */
+@keyframes compScoreAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply animation to computer score */
+#comp-score.animate-score {
+    color: #fff;
+    font-weight: bold;
+    animation: compScoreAnimation 0.5s ease; /* Apply animation to computer score */
+}
+
+
+
